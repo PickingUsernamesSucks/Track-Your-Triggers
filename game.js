@@ -1,10 +1,3 @@
-//readme
-//for the user, why it exists, what it does, red line (what it doesn't do)
-//project structure for json/js (for browser)
-//conception, construction, deployment - personal notes
-
-//Rules, incorperate after 1.0, but 1.0 should have a list and acknowledgement of scope
-
 let CardInput;
 const deck = [];
 
