@@ -1,0 +1,19 @@
+game.js
+Tasks - 
+add check boxes for a trigger has already been done this turn
+new turn button to wipe the check boxes immediatly instead of indivually.
+
+Check for Triggers
+Evaluate card text (check text by Every newline)
+If find any triggers, put them in corresponding area
+
+Possiblities - 
+
+Thoughts for Search function
+should we iterate through deck first and make sure it is a unique card?
+A unique non legendary? A token of a legend could be made, so I lean niether.
+Also, add ability to copy a card while it's on battlefield.
+Differerntiate between token and nontoken?
+
+add to if else statement when checking status of search. if 404, tell user to check spelling and uniqueness and try again
+if anything else, tell user unknown errror

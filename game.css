@@ -1,0 +1,15 @@
+.wide-half {
+    display: inline-block;
+    width:40%;
+}
+
+div {
+    border: 5px;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+}
+
+#third{
+    height: 500px;
+}
