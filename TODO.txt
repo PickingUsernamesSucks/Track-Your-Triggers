@@ -3,9 +3,17 @@ Tasks -
 add check boxes for a trigger has already been done this turn
 new turn button to wipe the check boxes immediatly instead of indivually.
 
+filter out instants and sorceries (nonpermanents?) or leave that to the user?
+similar questions for lands - they have some etb and some abilities that cost mana, should they be added? Perhaps in section3?
+
+Classes are leveled enchantments, provide a way to track level?
+Aren't there leveled creatures?
+Leyline of Anticipation - does that count as a trigger?
+
 Check for Triggers
-Evaluate card text (check text by Every newline)
 If find any triggers, put them in corresponding area
+
+cards like abnormal endurance add a temperary trigger for 1 turn. How do I handle that? (probably similar to Equipment)
 
 Possiblities - 
 
@@ -15,5 +23,42 @@ A unique non legendary? A token of a legend could be made, so I lean niether.
 Also, add ability to copy a card while it's on battlefield.
 Differerntiate between token and nontoken?
 
+Rules text has odd things like {2} representing 2 colorless mana or {w} representing 1 white mana.
+I can convert that into something more readable
+Planeswalkers have the oddest rules text, but those aren't triggered abilities, so do I care?
+
 add to if else statement when checking status of search. if 404, tell user to check spelling and uniqueness and try again
 if anything else, tell user unknown errror
+
+Add a checkbox for triggers to tell if they've been done this turn
+
+landfall triggers sometimes have landfall in the text. This could be removed to save space. There are probably more example of where text can be trimmed 
+
+Equipment - add their text to the creature instead, and remove it when the creature gets removed
+
+KNOWN ISSUES
+
+some cards have multiple triggers in the same line due to them having the same effect. The program currently only puts that text in the first area.
+possible solution - I check for triggers using a big if else statement. switching to several if statements would fix this issue, but would cause a need for refinement in catching creature dmg triggers, and slow the program down
+example card - Armory Automaton
+
+Sagas rules are being added to draw step - their rule should land on that div or any other
+possible solution - if saga includes type, skip. Before implementing see if there are any sagas this would break for
+
+Avalanch of Sector 7 - Whenever an opponent activates an ability of an artifact they control, Avalanche of Sector 7 deals 1 damage to that player.
+should go under the anytime, 
+
+Professor Hojo - Whenever one or more creatures you control become the target of an activated ability, draw a card. This ability triggers only once each turn.
+
+Zack Fair's etb does not get added text - Zack Fair enters with a +1/+1 counter on it.
+solution is - add a check for "cardName enters" but this particular etb is not really helpful for players to have ready, 
+check for cards with similar text to see if solution is worth implementing
+
+Hero's Blade - Whenever a legendary creature you control enters, you may attach this Equipment to it.
+currently caught as an etb trigger. Is this proper?
+
+Large comment in game.js CheckForTriggers function, with issues and thoughts
+
+SOLDIER Military Program -  text 
+"At the beginning of combat on your turn, choose one. If you control a commander, you may choose both instead.\n• Create a 1/1 white Soldier creature token.\n• Put a +1/+1 counter on each of up to two Soldiers you control."
+the trigger is caught, but options are not defined. The player can just look at the card, but other cards certainly have options as well.
