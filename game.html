@@ -17,40 +17,55 @@ extras?
 life
 commander damage
 other players
+
+labels
+font size, bold, dif font
+
+max box size?
 -->
 <body>
-<p>
-    Add a card to the battlefield 
-    <input id="CardInput" type="text"> 
-    <input type="button" id="SearchButton" value = "Search"> 
-    
-</p>
-<div class="wide-half" id="battlefield">
-    <div class="Brow" id="creature">creature</div>
-    <div class="Brow" id="enchantment">enchantment</div>
-    <div class="Brow" id="artifact">artifact</div>
-    <div class="Brow" id="others">others</div>
-    <!--do lands need a div?-->
-</div>
-<div class="wide-half" id="triggers">
-    <div class="tdiv" id="upkeep">upkeep <br></div>
-    <div class="tdiv" id="draw">draw <br></div>
-    <div class="tdiv" id="main1">main1 <br></div>
-    <div class="tdiv" id="spell">spell <br></div>
-    <div class="tdiv" id="landfall">landfall <br></div>
-    <div class="tdiv" id="etb">etb <br></div>
-    <div class="tdiv" id="crime">crime</div>
-    <div class="tdiv" id="anytime">anytime <br></div>
-    <div class="tdiv" id="combat">combat <br></div>
-    <div class="tdiv" id="dmg">dmg <br></div>
-    <div class="tdiv" id="death">death <br></div>
-    <div class="tdiv" id="pdmg">pdmg <br></div>
-    <div class="tdiv" id="main2">main2 <br></div>
-    <div class="tdiv" id="end">end <br></div>
-    p2
-</div>
-<div id="misc" class="wide-half" >
-    p3  <a href = "index.html">End game</a> 
+<div id="grid">
+    <div id="controls">
+        Add a card to the battlefield 
+        <input id="CardInput" type="text"> 
+        <input type="button" id="SearchButton" value = "Search"> <br>
+        <a href = "index.html">End game</a><br> 
+        <a href = "game.html">Restart game</a><br>
+        <input type="button"id="RemoveOneButton" value="Remove">
+    </div>   
+    </p>
+    <div  id="battlefield">
+        <div class="Brow" id="creature">Creatures <br></div>
+        <div class="Brow" id="enchantment">Enchantments<br></div>
+        <div class="Brow" id="artifact">Artifacts<br></div>
+        <div class="Brow" id="others">Others<br></div>
+        <!--do lands need a div?-->
+    </div>
+    <div  id="triggers">
+        <div class="tdiv" id="upkeep">upkeep <br></div>
+        <div class="tdiv" id="draw">draw <br></div>
+        <div class="tdiv" id="main1">main1 <br></div>
+        <div class="tdiv" id="spell">spell <br></div>
+        <div class="tdiv" id="landfall">landfall <br></div>
+        <div class="tdiv" id="etb">etb <br></div>
+        <div class="tdiv" id="crime">crime</div>
+        <div class="tdiv" id="lifegain">lifegain</div>
+        <div class="tdiv" id="anytime">anytime <br></div>
+        <div class="tdiv" id="combat">combat <br></div>
+        <div class="tdiv" id="dmg">dmg <br></div>
+        <div class="tdiv" id="death">death <br></div>
+        <div class="tdiv" id="pdmg">pdmg <br></div>
+        <div class="tdiv" id="main2">main2 <br></div>
+        <div class="tdiv" id="end">end <br></div>
+    </div>
+    <div id="offBf">
+        <div id="graveyard" class="wide-half">graveyard</div>
+        <div id="exile" class="wide-half">exile</div>
+    </div>
+    <div id="notesgrid"> 
+    <input type="text" id="notes" placeholder="Enter your notes here!">
+    </div>
+
 </div>
 </body>
 

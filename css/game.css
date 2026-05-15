@@ -1,15 +1,54 @@
-.wide-half {
-    display: inline-block;
-    width:40%;
+#grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-div {
-    border: 5px;
+#controls, #offBf, #notesgrid{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#battlefield{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#triggers{
+    grid-column-start: 2;
+    grid-column-end: 3;   
+}
+
+.tdiv, .Brow, #controls{
     border-color: black;
-    border-width: 5px;
+    border-width: 1%;
     border-style: solid;
 }
 
 .tdiv{
+    display:none;
+}
 
+div{
+    font-family: Beleren, fantasy;
+    font-size: large;
+}
+
+p, input, a{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+
+.wide-half {
+    display: inline-block;
+    width:48%;
+
+}
+
+#notesgrid{
+    height: 30vh;
+}
+
+#notes{
+    width: 98%;
+    height: 100%;
 }
